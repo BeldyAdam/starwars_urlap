@@ -1,0 +1,67 @@
+body{
+    background-image: url(Death-Star-I-copy_36ad2500.jpg);
+    color: white;
+}
+
+main{
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas:
+            "h h"
+            "a n"
+            "f f";
+}
+
+nav > ul > li > a{
+    color: white;
+    text-decoration: none;
+}
+
+header{
+    grid-area: h;
+}
+
+article{
+    grid-area: a;
+    height: 40vh;
+}
+
+a:hover{
+    color: red;
+}
+
+nav{
+    grid-area: n;
+}
+
+
+footer{
+    grid-area: f;
+}
+
+header, article, nav, footer {
+    background-color: rgb(54, 54, 54);
+
+}
+
+header, footer{
+    text-align: center;
+}
+
+@media all and (max-width: 1200px) {
+    main{
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+@media all and (max-width: 600px) {
+    main{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "h"
+        "n"
+        "a"
+        "f";
+    }
+}
